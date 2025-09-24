@@ -1,25 +1,3 @@
-"""
- **TimeZone Class**
-In this task, you will implement a class to store information about a time zone.
-To accomplish this, create a `TimeZone` class that accepts the following inputs:
-- the name of the time zone,
-- the hour offset relative to Coordinated Universal Time (UTC),
-- the minute offset relative to UTC.
-Your task is to implement three properties to manage and validate the input values. Their names must be:
-- `name`
-- `offset_hours`
-- `offset_minutes`
-The `name` property must accept only non-empty strings, trimming any leading or trailing whitespace. If the provided time zone name does not meet these requirements, raise a `ValueError` with the message:
-`'Timezone bad name - <value>'`
-The `offset_hours` property must accept only integer values ranging from -12 to 14 (inclusive). If the provided hour offset is not an integer, raise:
-`ValueError('Hour offset must be an integer.')`
-If the integer is outside the allowed range, raise:
-`ValueError('Offset must be between -12:00 and +14:00.')`
-The `offset_minutes` property must accept only integer values ranging from -59 to 59 (inclusive). If the provided minute offset is not an integer, raise:
-`ValueError('Minutes offset must be an integer.')`
-If the integer is outside the allowed range, raise:
-`ValueError('Minutes offset must be between -59 and 59.')`
- """
 class TimeZone:
     def __init__(self, name, offset_hours, offset_minutes):
         self.name = name
