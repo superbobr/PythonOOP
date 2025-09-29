@@ -27,9 +27,10 @@ class Pizza:
         else:
             self.ingredients = ingredients
 
-    def ingredient_to_txt(self, ingredients):
+    @staticmethod
+    def ingredient_to_txt(ingredients):
         result = ''
-        for ingredient in sorted(self.ingredients, key=lambda x: -x.weight):
+        for ingredient in sorted(ingredients, key=lambda x: -x.weight):
             result += str(ingredient) + '\n'
         return result
 
