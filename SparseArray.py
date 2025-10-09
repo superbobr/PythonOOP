@@ -1,6 +1,6 @@
 class SparseArray:
     def __init__(self, *items):
-        self._items = {} or dict(enumerate(items))
+        self._items = dict(enumerate(items))
 
     def __getitem__(self, item):
         if item < 0:
