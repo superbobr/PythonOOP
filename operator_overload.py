@@ -12,4 +12,12 @@ class Vector:
         return Vector(self.x + other.x, self.y + other.y)
 
 
-print(repr(Vector(1, 2)))
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __eq__(self, other):
+        if not isinstance(other, Person):
+            return False
+        return (self.name == other.name) and (self.age == other.age)
