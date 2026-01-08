@@ -40,6 +40,4 @@ class Car:
         return f"{self.engine.start()} и {self.wheels.rotate()}"
 
 
-test
-
 
