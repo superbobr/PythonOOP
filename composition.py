@@ -40,4 +40,24 @@ class Car:
         return f"{self.engine.start()} и {self.wheels.rotate()}"
 
 
+class Chapter:
+    def __init__(self, title):
+        self.title = title
 
+    def get_title(self):
+        return self.title
+
+
+class Book:
+    def __init__(self, title, chapters):
+        self.title = title
+        self.chapters = []
+        for chapter in chapters:
+            self.chapters.append(Chapter(chapter))
+
+    def get_table_of_contents(self):
+        temp = f"{self.title}\n"
+        for i, j in enumerate(self.chapters, start=1):
+            temp += f"Глава {i}: {j.title}\n"
+
+        return temp.rstrip()
