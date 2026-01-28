@@ -19,3 +19,24 @@ finally:
     print('Операция завершена')
 
 
+#ApiError
+
+class ApiError(Exception):
+    pass
+
+
+class AuthError(ApiError):
+    pass
+
+
+class TimeOutError(ApiError):
+    pass
+
+
+def make_request(should_fail_with: str):
+    if should_fail_with == "auth":
+        raise AuthError()
+    elif should_fail_with == "timeout":
+        raise TimeOutError()
+    else:
+        pass
