@@ -41,7 +41,6 @@ class Cart:
         self.__total = 0
 
     def add(self, product, quantity=1):
-        # Ключом теперь является сам объект product
         self.goods[product] += quantity
         self.__total += product.price * quantity
 
